@@ -323,6 +323,7 @@ body section.gallery .display {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
+  grid-row: 1fr 1fr 1fr;
   gap: 1rem;
   margin-top: 3rem;
 }
@@ -334,60 +335,59 @@ body section.gallery .display .gallery__img img {
 }
 
 body section.gallery .display .gallery__img:nth-of-type(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  -ms-grid-row: 1;
-  grid-row: 1;
+  grid-area: 1 / 1 / 2 / 2;
 }
 
 body section.gallery .display .gallery__img:nth-of-type(2) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
-  grid-column: 2 / 4;
-  -ms-grid-row: 1;
-  grid-row: 1;
+  grid-area: 1 / 2 / 2 / 4;
 }
 
 body section.gallery .display .gallery__img:nth-of-type(3) {
-  -ms-grid-column: 4;
-  grid-column: 4 / 4;
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1 / 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 4 / 4 / 5;
 }
 
 body section.gallery .display .gallery__img:nth-of-type(4) {
-  -ms-grid-column: 1;
-  grid-column: 1 / 1;
   -ms-grid-row: 2;
-  grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 1 / 4 / 2;
 }
 
 body section.gallery .display .gallery__img:nth-of-type(5) {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 3 / 3;
 }
 
 body section.gallery .display .gallery__img:nth-of-type(6) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
-  grid-column: 3 / 4;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
+  grid-area: 2 / 3 / 4 / 4;
 }
 
 body section.gallery .display .gallery__img:nth-of-type(7) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-  -ms-grid-row: 3;
-  grid-row: 3 / 3;
+  grid-area: 3 / 2 / 4 / 3;
 }
 
 body section.testimonial {
