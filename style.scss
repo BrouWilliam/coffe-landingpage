@@ -12,7 +12,32 @@ $black-color: #1f1f1f;
 
 .container{
     max-width: 1140px;
-    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (max-width: 1200px) {
+        max-width: 1140px;
+    }
+
+    @media screen and (max-width: 992px) {
+        max-width: 960px;
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media screen and (max-width: 576px) {
+        max-width: 540px;
+    }
+
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
 }
 
 .text-center{
@@ -43,6 +68,10 @@ body{
         justify-content: center;
         align-items: center;
 
+        @media screen and (max-width: 768px) {
+            height: 100%;
+        }
+
         .content__header{
             .display{
                 display: grid;
@@ -50,6 +79,10 @@ body{
                 gap: 1.5rem;
                 align-items: center;
                 justify-content: center;
+
+                @media screen and(max-width: 768px) {
+                    grid-template-columns: 1fr;
+                }
 
                 .content__info{
                     h1{
@@ -84,11 +117,11 @@ body{
                 }
 
                 .content__img{
-                    position: relative;
-
+                    
                     img{
                         max-width: 100%;
                         height: auto;
+                        position: relative;
                     }
 
                     &::after{
@@ -104,6 +137,12 @@ body{
                         transform: translateX(-50%);
                         z-index: -1;
                         border-radius: 50%;
+
+                        @media screen and(max-width: 768px) {
+                            height: 300px;
+                            width: 300px;
+                            top: 0;
+                        }
                     }
                 }
             }
@@ -117,6 +156,12 @@ body{
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 3rem 0;
+
+            @media screen and (max-width: 768px) {
+                height: 100%;
+                margin: 4rem 0;
+            }
 
             .display{
                 display: grid;
@@ -124,11 +169,11 @@ body{
                 align-items: center;
                 gap: 2rem;
 
-                .content__img{
-                    img{
-                        max-width: 440px;
-                    }
+                @media screen and (max-width: 768px) {
+                    grid-template-columns: 1fr;
                 }
+
+
                 .content__text{
                     p{
                         font-size: 0.9rem;
@@ -140,6 +185,10 @@ body{
                         list-style: none;
                         gap: 1rem;
                         margin-top: 2.5rem;
+
+                        @media screen and (max-width: 768px) {
+                            justify-content: center;
+                        }
 
                         li{
                             img{
@@ -155,12 +204,22 @@ body{
             width: 100%;
             display: flex;
             align-items: center;
+            margin: 2rem 0;
+
+            @media screen and (max-width: 768px) {
+                height: 100%;
+            }
 
             .display{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 align-items: end;
                 justify-content: center;
+                gap: 2rem;
+
+                @media screen and (max-width: 768px) {
+                    grid-template-columns: 1fr;
+                }
 
                 .content__info{
                     h3{
@@ -190,6 +249,10 @@ body{
                     justify-content: center;
                     img{
                         max-width: 350px;
+
+                        @media screen and (max-width: 768px) {
+                            max-width: 250px;
+                        }
                     }
                 }
             }
@@ -201,6 +264,11 @@ body{
             justify-content: center;
             align-items: center;
             background-color: #e9e2da;
+            padding: 3rem 0;
+
+            @media screen and (max-width: 768px) {
+                height: 100%;
+            }
 
             .display{
                 display: grid;
@@ -210,16 +278,22 @@ body{
                 align-items: center;
                 margin-top: 3rem;
 
+                @media screen and (max-width: 768px) {
+                    grid-template-columns: 1fr;
+                }
+
                 .content__info_one{
                     text-align: right;
+
+                    @media screen and(max-width: 768px) {
+                        text-align: left;
+                    }
 
                     ul{
                         list-style: none;
                         padding: 0;
                         
                         li{
-                            margin: 1rem 0;
-                            margin-right: 1.5rem;
                             margin: 1.5rem 1.5rem;
                             
                             p{
@@ -237,7 +311,12 @@ body{
                                     background-color: #c4c4c4;
                                     border-radius: 50%;
                                     margin-left: .5rem;
+
+                                    @media screen and(max-width: 768px) {
+                                        display: none;
+                                    }
                                 }
+
                             }
 
                             
@@ -273,6 +352,10 @@ body{
                 grid-row: 1fr 1fr 1fr;
                 gap: 1rem;
                 margin-top: 3rem;
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
 
                 .gallery__img{
 
@@ -323,7 +406,12 @@ body{
                 grid-template-columns: repeat(3, 1fr);
                 margin-top: 5rem;
 
+                @media screen and (max-width: 768px) {
+                    grid-template-columns: 1fr;
+                }
+
                 .testimonial__content{
+                    margin: 2rem 0;
                     .data__testimonial{
                         display: flex;
                         gap: 0.5rem;
@@ -373,6 +461,10 @@ body{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 2rem;
+
+                @media screen and (max-width: 768px) {
+                    grid-template-columns: 1fr;
+                }
 
                 form{
                     .form__group{
