@@ -134,18 +134,17 @@ body header .content__header .display .content__info a {
   max-width: 250px;
 }
 
+body header .content__header .display .content__info a:hover svg {
+  margin-left: 1rem;
+}
+
 body header .content__header .display .content__info a svg {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  margin-left: .5rem;
 }
 
-body header .content__header .display .content__info a svg:hover {
-  padding-left: 1rem;
-}
-
-body header .content__header .display .content__img img {
-  max-width: 100%;
-  height: auto;
+body header .content__header .display .content__img {
   position: relative;
 }
 
@@ -153,8 +152,8 @@ body header .content__header .display .content__img::after {
   content: '';
   position: absolute;
   background-color: #855c57;
-  max-width: 350px;
-  max-height: 350px;
+  max-width: 330px;
+  max-height: 330px;
   width: 100%;
   height: 100%;
   left: 50%;
@@ -193,6 +192,7 @@ body section.about__us {
   body section.about__us {
     height: 100%;
     margin: 4rem 0;
+    background: transparent;
   }
 }
 
@@ -276,6 +276,7 @@ body section.product .display {
   body section.product .display {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    gap: 0;
   }
 }
 
@@ -302,6 +303,16 @@ body section.product .display .content__info a {
   text-decoration: none;
   margin: 1.5rem 0 2rem;
   display: inline-block;
+}
+
+body section.product .display .content__info a:hover svg {
+  margin-left: 1rem;
+}
+
+body section.product .display .content__info a svg {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-left: 0.5rem;
 }
 
 body section.product .display .content__img {
@@ -419,16 +430,60 @@ body section.quality .display .content__img img {
   max-width: 250px;
 }
 
+body section.quality .display .content__info_two {
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  body section.quality .display .content__info_two {
+    text-align: left;
+  }
+}
+
+body section.quality .display .content__info_two ul {
+  list-style: none;
+  padding: 0;
+}
+
+body section.quality .display .content__info_two ul li {
+  margin: 1.5rem 1.5rem;
+}
+
+body section.quality .display .content__info_two ul li p {
+  font-size: .85rem;
+  margin-top: 0.25rem;
+  position: relative;
+}
+
+body section.quality .display .content__info_two ul li p::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  background-color: #c4c4c4;
+  border-radius: 50%;
+  margin-right: .5rem;
+  left: -35px;
+}
+
+@media screen and (max-width: 768px) {
+  body section.quality .display .content__info_two ul li p::before {
+    display: none;
+  }
+}
+
+body section.quality .display .content__info_two ul li:nth-of-type(2) {
+  margin-left: 3.5rem;
+}
+
 body section.gallery {
   padding: 3rem 0;
 }
 
-body section.gallery h2 {
-  text-align: center;
-}
-
 body section.gallery p {
-  text-align: center;
   margin-top: 1rem;
 }
 
@@ -446,12 +501,6 @@ body section.gallery .display {
   body section.gallery .display {
     display: none;
   }
-}
-
-body section.gallery .display .gallery__img img {
-  max-width: 100%;
-  height: auto;
-  width: 100%;
 }
 
 body section.gallery .display .gallery__img:nth-of-type(1) {
@@ -514,12 +563,7 @@ body section.testimonial {
   padding: 4rem 0;
 }
 
-body section.testimonial h2 {
-  text-align: center;
-}
-
 body section.testimonial p {
-  text-align: center;
   margin-top: 1rem;
 }
 
@@ -637,9 +681,18 @@ body section.contact .display form button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 300px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body section.contact .display form button:hover svg {
+  margin-left: 1rem;
 }
 
 body section.contact .display form button svg {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   margin-left: .5rem;
 }
 
@@ -673,6 +726,10 @@ body footer .content__footer {
           align-items: center;
 }
 
+body footer .content__footer h2 {
+  color: #FFF;
+}
+
 body footer .content__footer .info__footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -686,6 +743,12 @@ body footer .content__footer .info__footer ul li {
 
 body footer .content__footer .info__footer ul li a {
   color: #FFF;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body footer .content__footer .info__footer ul li a:hover {
+  padding-left: 1rem;
 }
 
 body footer .content__footer .info__footer .menu__footer ul li {
@@ -701,7 +764,6 @@ body footer hr {
 }
 
 body footer .copy__footer {
-  text-align: center;
   color: #FFF;
 }
 /*# sourceMappingURL=style.css.map */
